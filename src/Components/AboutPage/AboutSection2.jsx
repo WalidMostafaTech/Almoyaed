@@ -30,19 +30,25 @@ const AboutSection2 = () => {
             loading="lazy"
           />
         </div>
-        <div className="flex mt-5 lg:mt-0 flex-col gap-7 py-3">
+
+        <div className="flex mt-5 lg:mt-0 flex-col gap-7">
           <h2 className="text-[27px] text-center lg:text-start font-bold text-[#B35919]">
             {firstItem.name}
           </h2>
-          <div className="flex items-center gap-2 ">
+          <div className="flex items-center gap-2">
             <img src={assets.iconBuild} alt="img" />
             <p className="text-[#AC9899] font-medium">{firstItem.location}</p>
           </div>
-          <p className="font-bold">{t('project_descriptionn')}</p>
-          <p className="h-full max-h-[300px] lg:max-h-[200px] w-full text-center md:text-start leading-9 text-[#999999]"  dangerouslySetInnerHTML={{ __html: firstItem.description }}>
-          </p>
-          <div className="mt-10 text-center lg:text-start">
-            <Buttons href={`/works/${firstItem.id}`} text={t("project_details")} />
+          <p className="font-bold">{t("project_descriptionn")}</p>
+          <div
+            className="w-full text-center md:text-start leading-9 text-[#999999]"
+            dangerouslySetInnerHTML={{ __html: firstItem.description }}
+          />
+          <div className="text-center lg:text-start">
+            <Buttons
+              href={`/works/${firstItem.id}`}
+              text={t("project_details")}
+            />
           </div>
         </div>
       </div>
